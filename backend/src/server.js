@@ -20,6 +20,8 @@ app.get('/', (req, res) => {
   res.send('Api is Working');
 });
 
-app.use('/api/v1/auth', authRouter);
+app.use('/api/auth', authRouter);
 
-app.listen(PORT, () =
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
