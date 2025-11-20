@@ -43,9 +43,9 @@ Perfect for learning real-time systems, practicing full-stack workflows, or show
 | Frontend | Backend | Real-time |
 |----------|---------|----------|
 | React.js | Node.js | Socket.io |
-| TailwindCSS | Express.js | Zustand |
-| DaisyUI | MongoDB | JWT |
-
+| TailwindCSS | Express.js|
+| DaisyUI | MongoDB|
+| Zustand |  JWT |
 ---
 
 ## ⚡ Installation
