@@ -11,8 +11,8 @@ Perfect for learning real-time systems, practicing full-stack workflows, or show
 [![Node.js](https://img.shields.io/badge/Node.js-18-green?logo=node.js)](https://nodejs.org/)
 [![Socket.io](https://img.shields.io/badge/Socket.io-4.x-red)](https://socket.io/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0-brightgreen?logo=mongodb)](https://www.mongodb.com/)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3-blue?logo=tailwindcss)](https://tailwindcss.com/)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-purple)](https://linked-in-three-sepia.vercel.app/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1-blue?logo=tailwindcss)](https://tailwindcss.com/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-purple)](https://chat-app-f2r7.onrender.com/)
 
 
 ---
