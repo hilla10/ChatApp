@@ -107,8 +107,11 @@ ChatApp/
 
 ## 🤝 Contributing
 1, Fork this repo
+
 2, Create your feature branch
+
 3, Commit changes
+
 4, Open a Pull Request
 
 ## 📄 License
@@ -118,7 +121,8 @@ Licensed under the MIT License.
 📬 Contact
 
 Author: Hailemichael
-🌐 Portfolio: [ portfolio.com] (https://portfolio-rho-gules-15.vercel.app/)
 
-💼 LinkedIn:[Linkedin] (https://www.linkedin.com/in/hailemichaelnegusse/)
+🌐 Portfolio: [ portfolio](https://portfolio-rho-gules-15.vercel.app/)
+
+💼 LinkedIn:[Linkedin](https://www.linkedin.com/in/hailemichaelnegusse/)
 
