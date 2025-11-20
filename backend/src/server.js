@@ -2,15 +2,16 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+
 import authRouter from './routes/authRoutes.js';
 import messageRouter from './routes/messageRoutes.js';
 import connectDB from './lib/db.js';
+import { app, server } from './lib/socket.js';
 
 dotenv.config();
 
 await connectDB();
 
-const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(
@@ -27,8 +28,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/auth', authRouter);
-app.use('/api/message', messageRouter);
+app.use('/api/messages', messageRouter);
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

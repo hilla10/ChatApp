@@ -5,15 +5,40 @@ import ChatHeader from './ChatHeader';
 import MessageInput from './MessageInput';
 import { useAuthStore } from '../store/useAuthStore';
 import { formatMessageTime } from '../utils';
+import { useRef } from 'react';
 
 const ChatContainer = () => {
-  const { messages, getMessages, isMessagesLoading, selectedUser } =
-    useChatStore();
+  const {
+    messages,
+    getMessages,
+    isMessagesLoading,
+    selectedUser,
+    subscribeToMessages,
+    unsubscribeFromMessages,
+  } = useChatStore();
   const { authUser } = useAuthStore();
+  const messageEndRef = useRef(null);
 
   useEffect(() => {
     getMessages(selectedUser._id);
-  }, [getMessages, selectedUser._id]);
+
+    subscribeToMessages();
+
+    return () => unsubscribeFromMessages();
+  }, [
+    getMessages,
+    selectedUser._id,
+    subscribeToMessages,
+    unsubscribeFromMessages,
+  ]);
+
+  useEffect(() => {
+    if (messageEndRef.current && messages) {
+      
+      messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
+
+    }
+  },[messages])
 
   if (isMessagesLoading) {
     return (
@@ -31,6 +56,7 @@ const ChatContainer = () => {
         {messages.map((message) => (
           <div
             key={message._id}
+            ref={messageEndRef}
             className={`chat ${
               message.senderId === authUser._id ? 'chat-end' : 'chat-start'
             }`}>
