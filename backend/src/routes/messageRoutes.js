@@ -11,6 +11,6 @@ const messageRouter = Router();
 messageRouter.get('/users', protectRoute, getUsersForSidebar);
 messageRouter.get('/:id', protectRoute, getMessages);
 
-messageRouter.post('/send:id', protectRoute, sendMessage);
+messageRouter.post('/send/:id', protectRoute, sendMessage);
 
 export default messageRouter;
