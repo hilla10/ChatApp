@@ -84,8 +84,8 @@ export const logout = async (req, res) => {
   try {
     res.clearCookie('jwt-token', {
       httpOnly: true,
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
     });
     res.json({ message: 'Logged out successfully' });
   } catch (error) {
